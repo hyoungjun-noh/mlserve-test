@@ -12,8 +12,8 @@ class Model(kserve.Model):
         self.ready = True
 
     def predict(self, request: Dict) -> Dict:
-        inputs = request["instances"]        
-        return {"instances": inputs}
+        inputs = request["inputs"]        
+        return {"inputs": inputs}
 
 
 if __name__ == "__main__":
