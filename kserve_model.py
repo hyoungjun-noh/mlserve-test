@@ -11,7 +11,7 @@ class Model(kserve.Model):
     def load(self):
         self.ready = True
 
-    def predict(self, request: Dict) -> Dict:
+    def predict(self, request: Dict, headers: Dict[str, str] = None) -> Dict:
         inputs = request["inputs"]        
         return {"inputs": inputs}
 
